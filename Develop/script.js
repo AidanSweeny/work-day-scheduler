@@ -1,0 +1,44 @@
+$(document).ready(function () {
+    var hours = $(".hour");
+    var timeBlock = $(".col-10");
+    writing = JSON.parse(localStorage.getItem("writing"));
+    for(var i=0; i<hours.length; i++){
+        console.log(writing);
+        if(writing !== null){
+            timeBlock[i].value = writing[i];
+        }
+    }
+    for (var i=0; i<hours.length; i++){
+        if(i<12){
+            if (moment().hour() === parseInt(hours[i].innerHTML.split(" ")[0], 10)){
+                $(timeBlock[i]).addClass("present");
+            } 
+            else if(moment().hour() > parseInt(hours[i].innerHTML.split(" ")[0], 10)){
+                $(timeBlock[i]).addClass("past");
+            }
+            else{
+                $(timeBlock[i]).addClass("future");
+            }
+        }
+        else{
+            if (moment().hour() === parseInt(hours[i].innerHTML.split(" ")[0], 10)+12){
+                $(timeBlock[i]).addClass("present");
+            }
+            else if(moment().hour() > parseInt(hours[i].innerHTML.split(" ")[0], 10)+12){
+                $(timeBlock[i]).addClass("past");
+            }
+            else{
+                $(timeBlock[i]).addClass("future");
+            }
+        }
+    }
+
+    $(".saveBtn").on("click", function(){
+        writing = {};
+        for (var i=0; i<hours.length; i++){
+            writing[hours[i].innerHTML.split(" ")[0]] = timeBlock[i].value;
+            localStorage.setItem("writing", JSON.stringify(writing))
+        }
+    })
+
+});
