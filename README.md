@@ -1,5 +1,10 @@
 # work-day-scheduler
-For this project we were assigned to create a day planner that would display in a certain way, and 
+For this project we were assigned to create a day planner that would display in a certain way, and save any edits that were made to the schedule. To do this I used the prexisting CSS template that was provided for us. I organized the schedule with a div time block that was a row surrounding the other elements. Within the row there was a hour block that had a col-1, a text input block that had a col-10 and a save button with a col-1 as well. I then did the coloring through the javascript. Any of the our blocks that had already past were displayed in grey, any that were in the future were green, and the red one was the present time slot. To match the hour with the corresponding color I had to use some interesting indexing methods. I decdided upon the following code snippet to findout what hour I was in:
+```
+parseInt(hours[i].innerHTML.split(" ")[0], 10))
+```
+
+So that anything entered into the calender would save, I created an on click event that was triggered when the save button was clicked. I saved all the items in an object that would populate the calender at the start of the script. If the values in the object were undefined then it would not populate. Finaly I added the date at the top of the page so that 
 
 ![](Password-Generator.gif)
 

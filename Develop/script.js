@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
     var hours = $(".hour");
     var timeBlock = $(".col-10");
     writing = JSON.parse(localStorage.getItem("writing"));
