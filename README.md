@@ -4,9 +4,9 @@ For this project we were assigned to create a day planner that would display in 
 parseInt(hours[i].innerHTML.split(" ")[0], 10))
 ```
 
-So that anything entered into the calender would save, I created an on click event that was triggered when the save button was clicked. I saved all the items in an object that would populate the calender at the start of the script. If the values in the object were undefined then it would not populate. Finaly I added the date at the top of the page so that 
+So that anything entered into the calender would save, I created an on click event that was triggered when the save button was clicked. I saved all the items in an object that would populate the calender at the start of the script. If the values in the object were undefined then it would not populate. Finaly I added the date at the top of the page so that it would display nicely. Below is a video of the calendar in action:
 
-![](Password-Generator.gif)
+![](scheduler.gif)
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Homebrew can also be downloaded by inputting the following command in the termin
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
-
+The moment.js librarys can be used for the timing elements of the project. 
 ### Installing
 
 To install this project one must go through the GitHub website in order to clone this project. Clicking on the cone or download button and then copying the link that comes from that. One can then go into the Terminal application, and use the following command to copy the files:
@@ -37,10 +37,11 @@ This should then be moved to your desktop, or somewhere else on your computer. T
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Moment.js](https://momentjs.com/docs/)
 
 ## Deployed Link
 
-* [See Live Site](https://aidansweeny.github.io/password-generator/)
+* [See Live Site](https://aidansweeny.github.io/work-day-scheduler/)
 
 ## Authors
 
@@ -56,4 +57,5 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 * Berkley Coding Bootcamp
+* Font Awesome
 
